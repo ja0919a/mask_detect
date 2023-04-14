@@ -19,7 +19,7 @@ if not exists(prototxt) or not exists(caffemodel):
     urlretrieve(
         f"https://raw.githubusercontent.com/opencv/opencv_3rdparty/dnn_samples_face_detector_20170830/{caffemodel}",
         caffemodel)
-# 初始化模型 (模型使用的Input Size為 (300, 300))
+# 初始化模型 (模型使用的Input Size為 (96, 96))
 net = cv2.dnn.readNetFromCaffe(prototxt=prototxt, caffeModel=caffemodel)
 
 size = 96
